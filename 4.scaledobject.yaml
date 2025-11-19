@@ -1,0 +1,24 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: nginx-queue-scaledobject
+  namespace: keda-ns
+spec:
+  scaleTargetRef:
+    name: nginx-queue-scale
+  pollingInterval: 5            # seconds between checks
+  cooldownPeriod: 30            # scale down grace
+  minReplicaCount: 0
+  maxReplicaCount: 10
+  triggers:
+  - type: azure-queue
+    metadata:
+      accountName: "stoexp25667805699"
+      queueName: "demo-queue"
+      # scale up 1 pod per this many messages
+      queueLength: "5"
+      # optional: don't wake up until there are at least this many
+      activationQueueLength: "1"
+      cloud: "AzurePublicCloud"
+    authenticationRef:
+      name: azqueue-auth-wi

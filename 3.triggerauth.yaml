@@ -1,0 +1,9 @@
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: azqueue-auth-wi
+  namespace: keda-ns
+spec:
+  podIdentity:
+    provider: azure-workload
+    identityId: "f653022e-989d-474c-9957-016cf258d14f"

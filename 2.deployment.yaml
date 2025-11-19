@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-queue-scale
+  namespace: keda-ns
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: nginx-queue-scale
+  template:
+    metadata:
+      labels:
+        app: nginx-queue-scale
+    spec:
+      serviceAccountName: keda-queue-sa
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+
