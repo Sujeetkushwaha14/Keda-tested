@@ -2,7 +2,7 @@ apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
   name: nginx-queue-scaledobject
-  namespace: keda-ns
+  namespace: keda
 spec:
   scaleTargetRef:
     name: nginx-queue-scale
@@ -13,8 +13,8 @@ spec:
   triggers:
   - type: azure-queue
     metadata:
-      accountName: "stoexp25667805699"
-      queueName: "demo-queue"
+      accountName: "kedastoragesujeet"  #stg name
+      queueName: "keda-queue"           #message queue name 
       # scale up 1 pod per this many messages
       queueLength: "5"
       # optional: don't wake up until there are at least this many
@@ -22,3 +22,4 @@ spec:
       cloud: "AzurePublicCloud"
     authenticationRef:
       name: azqueue-auth-wi
+

@@ -1,4 +1,4 @@
-$AKS_NS="keda-ns"    
+$AKS_NS="keda"    
 
 kubectl get scaledobject -n $AKS_NS
 kubectl describe scaledobject nginx-queue-scaledobject -n $AKS_NS

@@ -1,6 +1,6 @@
 # KEDA-Testing
-kubectl get hpa -n keda-ns -w
-kubectl get deploy/nginx-queue-scale -n keda-ns -w
+kubectl get hpa -n keda -w
+kubectl get deploy/nginx-queue-scale -n keda -w
 
 # 0) Prereqs you already have
 
@@ -281,3 +281,7 @@ az identity delete -g $RG -n $UAMI_NAME
 [1]: https://learn.microsoft.com/en-us/azure/aks/keda-workload-identity?utm_source=chatgpt.com "Securely scale your applications using the KEDA add-on ..."
 [2]: https://keda.sh/docs/2.17/authentication-providers/azure-ad-workload-identity/?utm_source=chatgpt.com "Azure AD Workload Identity"
 [3]: https://keda.sh/docs/2.17/scalers/azure-storage-queue/?utm_source=chatgpt.com "Azure Storage Queue"
+# KEDA-Testing-main
+# KEDA-Testing-main
+# KEDA-Testing-main
+# Keda-tested

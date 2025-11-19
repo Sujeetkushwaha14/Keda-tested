@@ -1,12 +1,12 @@
 $SUBSCRIPTION="6dbc33a2-5da4-4090-8ac2-b8dde7d2a834"
-$RG="rg1"
-$AKS_NAME="kedaAksCluster"
+$RG="sujeetrg"
+$AKS_NAME="kedaclustersk"
 $AKS_NS="keda"            # k8s namespace to use
-$SA_NAME="likuhanvinbeni"   # storage account name (no connection string needed)
-$QUEUE_NAME="demo-queue"
-$UAMI_NAME="keda-queue-uami"       # user-assigned managed identity name
-$LOCATION="eastus"    # e.g. westeurope
-$SA_CLIENTID_ANNOT="b3587135-0c44-493c-a882-3e51e127a3dc"              # we'll fill after we create identity
+$SA_NAME="kedastoragesujeet"   # storage account name (no connection string needed)
+$QUEUE_NAME="keda-queue"
+$UAMI_NAME="keda-identity"       # user-assigned managed identity name
+$LOCATION="centralindia"    # e.g. westeurope
+$SA_CLIENTID_ANNOT="6ab8e776-cb76-42c9-915e-e4d03e9d0bc5"              # we'll fill after we create identity
 $SA_NAME_K8S="keda-queue-sa"       # k8s service account name used by the scaled workload
 
 az account set -s $SUBSCRIPTION

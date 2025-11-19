@@ -1,9 +1,9 @@
 $KEDA_NS          = "keda"
 $KEDA_SA          = "keda-operator"
 $SUBSCRIPTION     = "6dbc33a2-5da4-4090-8ac2-b8dde7d2a834"
-$RG               = "Rg1"
-$AKS_NAME         = "kedaAksCluster"
-$UAMI_NAME        = "keda-queue-uami"
+$RG               = "sujeetrg"
+$AKS_NAME         = "kedaclustersk"
+$UAMI_NAME        = "keda-identity"
 
 
 az account set -s $SUBSCRIPTION
